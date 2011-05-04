@@ -11,7 +11,7 @@ if ( 'root' != strtolower($whoami) ) {
 	exitWithError("Please run script as root.");
 }
 
-$homedir = trim(`cd ~ && pwd`);
+$homedir = trim(`echo \$HOME`);
 $iniFile = $homedir.'/.get-shit-done.ini';
 
 if (file_exists($iniFile)) {
